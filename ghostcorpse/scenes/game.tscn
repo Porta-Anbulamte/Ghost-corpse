@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cdrtjdooi1si5"]
+
+[ext_resource type="Script" uid="uid://dkr1jvrb0oigm" path="res://character_body_2d.gd" id="1_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://d18eyxameiaxo" path="res://assets/player/bicho.png" id="2_yqjtg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jmx7e"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jmx7e"]
+a = Vector2(-141, 342)
+
+[node name="game" type="Node2D" unique_id=383604444]
+
+[node name="ghost" type="CharacterBody2D" parent="." unique_id=51886037]
+position = Vector2(92, 160)
+script = ExtResource("1_yqjtg")
+
+[node name="colision" type="CollisionShape2D" parent="ghost" unique_id=2131574711]
+shape = SubResource("CapsuleShape2D_jmx7e")
+
+[node name="Sprite2D" type="Sprite2D" parent="ghost" unique_id=1805684790]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_yqjtg")
+flip_h = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2083491211]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=927622289]
+position = Vector2(314, 28)
+shape = SubResource("SegmentShape2D_jmx7e")
