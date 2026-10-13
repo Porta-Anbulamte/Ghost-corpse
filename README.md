@@ -1,2 +1,1 @@
-# Ghost-corpse
-jogo rogue like
+# Ghost-corpse2
